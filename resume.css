@@ -139,6 +139,14 @@ h3 {
   margin-top: 0;
 }
 
+@media (max-width: 767px) {
+  #experience .job {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 0.25rem;
+  }
+}
+
 .job-meta {
   margin: 0 0 0.35rem;
   color: var(--muted);

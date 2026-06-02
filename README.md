@@ -6,8 +6,8 @@
 
 啟用 GitHub Pages 後，網址通常為：
 
-- **首頁（建議分享）：** `https://<你的 GitHub 帳號>.github.io/<repo 名稱>/`
-- **或直接：** `https://<你的 GitHub 帳號>.github.io/<repo 名稱>/resume.html`
+- **首頁（建議分享）：** `https://Inaaac.github.io/resume/`
+- **或直接：** `https://Inaaac.github.io/resume/resume.html`
 
 `index.html` 與 `resume.html` 內容相同；更新履歷時請同步兩者，或執行：
 
@@ -41,7 +41,7 @@ python3 -m http.server 8080
 
 ```bash
 cd /path/to/resume
-git remote add origin https://github.com/<帳號>/<repo>.git
+git remote add origin https://github.com/Inaaac/resume.git
 git branch -M main
 git push -u origin main
 ```
