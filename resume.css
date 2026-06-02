@@ -1,0 +1,227 @@
+/* A4-friendly resume
+   - resume.html          ← sync from base-0522.md（通用版）
+   - resume-LineBank.html ← sync from variants/LineBank.md
+*/
+
+:root {
+  --text: #111;
+  --muted: #444;
+  --accent: #1155cc;
+  --font: "Microsoft YaHei", "PingFang TC", "Noto Sans TC", sans-serif;
+  --font-en: Arial, Helvetica, sans-serif;
+  --page-width: 210mm;
+  --page-pad: 18mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: var(--font);
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: var(--text);
+  background: #f5f5f5;
+}
+
+.resume {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--page-pad);
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.role {
+  margin: 0.15rem 0 0.4rem;
+  font-family: var(--font-en);
+  font-size: 11pt;
+}
+
+.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 10pt;
+}
+
+.contact a {
+  color: var(--accent);
+}
+
+.summary {
+  margin: 0.6rem 0 1rem;
+}
+
+h2 {
+  margin: 1rem 0 0.35rem;
+  font-family: var(--font-en);
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.15rem;
+}
+
+h3 {
+  margin: 0.85rem 0 0.1rem;
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+/* Experience：左右欄（左：年分／公司／職稱；右：經歷列點） */
+#experience .job {
+  display: grid;
+  grid-template-columns: minmax(9.5rem, 25%) 1fr;
+  column-gap: 1.1rem;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+#experience .job:last-child {
+  margin-bottom: 0;
+}
+
+#experience .job-aside {
+  min-width: 0;
+}
+
+#experience .job-detail {
+  min-width: 0;
+}
+
+#experience .job h3 {
+  font-size: 16px;
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+#experience .job .job-meta {
+  margin: 0 0 0;
+}
+
+#experience .job-detail h4 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+#experience .job-detail h4:first-of-type {
+  margin-top: 0;
+}
+
+#experience .job-detail h4 + ul,
+#experience .job-detail h4 + p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#experience .job-detail ul {
+  margin-bottom: 0;
+}
+
+#experience .job-detail > ul:first-child {
+  margin-top: 0;
+}
+
+.job-meta {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 9.5pt;
+}
+
+h4 {
+  margin: 0.5rem 0 0.15rem;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 0.35rem;
+}
+
+ul {
+  margin: 0.15rem 0 0.5rem;
+  padding-left: 1.15rem;
+}
+
+li {
+  margin-bottom: 0.2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.35rem;
+}
+
+.skill-block h4 {
+  margin-top: 0;
+}
+
+.skill-block ul {
+  margin-bottom: 0;
+}
+
+.skill-block--full {
+  grid-column: 1 / -1;
+}
+
+.tools-list {
+  margin: 0.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  margin: 0.25rem 0 0;
+}
+
+.lang-table th,
+.lang-table td {
+  text-align: left;
+  padding: 0.15rem 0.5rem 0.15rem 0;
+  vertical-align: top;
+}
+
+.lang-table th {
+  font-weight: 700;
+  width: 28%;
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .resume {
+    box-shadow: none;
+    max-width: none;
+    padding: var(--page-pad);
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+  }
+}
